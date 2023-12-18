@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Wave Config", fileName = "New Wave Config")]
 
-public class WaveConfiguraitonSO : MonoBehaviour
+public class WaveConfiguraitonSO : ScriptableObject
 {
     [SerializeField] Transform pathPrefab;
     [SerializeField] float fltMoveSpeed = 5f;
