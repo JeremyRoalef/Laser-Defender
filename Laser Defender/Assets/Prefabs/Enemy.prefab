@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7331881705315755437}
   - component: {fileID: -7917520490638198312}
   - component: {fileID: -3610497382990623393}
+  - component: {fileID: 6930085333164521231}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -137,6 +138,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intDamageValue: 10
+--- !u!114 &6930085333164521231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080993840647780988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083394ffbf171af419d7649a53b18320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5416884303999104462, guid: 7e08890dd4942814089137640ef076c5, type: 3}
+  fltProjectileSpeed: -10
+  fltProjectileLifetime: 5
+  fltTimeBetweenShots: 0.5
+  useAI: 1
+  fltMinFireRate: 0.1
+  fltMaxFireRate: 1
+  fltFiringVariance: 0.3
+  boolIsFiring: 0
 --- !u!1 &8439517206162833706
 GameObject:
   m_ObjectHideFlags: 0
