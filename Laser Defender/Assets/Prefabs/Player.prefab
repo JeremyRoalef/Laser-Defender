@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7296571878085756941}
   - component: {fileID: -8408708572795750856}
   - component: {fileID: 6742294467292704313}
+  - component: {fileID: 2784882826102322995}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -81,10 +82,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fltMoveSpeed: 10
-  fltPaddingLeft: 0
-  fltPaddingRight: 0
-  fltPaddingUp: 0
-  fltPaddingDown: 0
+  fltPaddingLeft: 0.5
+  fltPaddingRight: 0.5
+  fltPaddingUp: 5
+  fltPaddingDown: 2
 --- !u!50 &4847576291057659092
 Rigidbody2D:
   serializedVersion: 4
@@ -173,6 +174,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intDamageValue: 10
+--- !u!114 &2784882826102322995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698727556413580716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083394ffbf171af419d7649a53b18320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5416884303999104462, guid: 7d376c2a35b3bad4d952198ee42b6a23, type: 3}
+  fltProjectileSpeed: 10
+  fltProjectileLifetime: 5
+  fltTimeBetweenShots: 0.5
+  boolIsFiring: 0
 --- !u!1 &5865625231485345559
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    Shooter shooter;
+
     Vector2 moveInput;
     [SerializeField] float fltMoveSpeed;
 
@@ -16,6 +18,11 @@ public class Player : MonoBehaviour
     [SerializeField] float fltPaddingDown;
     Vector2 minBoundary;
     Vector2 maxBoundary;
+
+    private void Awake()
+    {
+        shooter = GetComponent<Shooter>();
+    }
 
     void Start()
     {
@@ -42,8 +49,14 @@ public class Player : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
 
-        Debug.Log(moveInput);
+    void OnFire(InputValue value)
+    {
+        if (shooter != null)
+        {
+            shooter.boolIsFiring = value.isPressed;
+        }
     }
 
     private void PlayerMovement()
