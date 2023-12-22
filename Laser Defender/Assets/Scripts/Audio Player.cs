@@ -13,6 +13,14 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip takeDamageClip;
     [SerializeField] [Range(0f,1f)]float fltDamageVolume = 1.0f;
 
+    static AudioPlayer instance;
+
+
+    private void Awake()
+    {
+        ManageSingleton();
+    }
+
     public void PlayShootingClip()
     {
         if (shootingClip != null)
@@ -26,6 +34,21 @@ public class AudioPlayer : MonoBehaviour
         if(takeDamageClip != null)
         {
             AudioSource.PlayClipAtPoint(takeDamageClip,Camera.main.transform.position, fltDamageVolume);
+        }
+    }
+
+    void ManageSingleton()
+    {
+
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 }
